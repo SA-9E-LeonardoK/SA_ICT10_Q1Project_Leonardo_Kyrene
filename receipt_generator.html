@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
  
-    <!-- CHANGED: Lilita One removed from this link since ITC Bauhaus now covers the headers -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -25,7 +24,6 @@
         font-weight: normal;
         font-style: normal;
     }
-        /* CHANGED: color palette pulled from the screenshot */
         :root {
             --sky: #d6eaee;      /* page background */
             --pink: #ffc2c2;     /* navbar + footer */
@@ -37,7 +35,6 @@
             height: 100%;
         }
  
-        /* CHANGED: solid light-blue background, Poppins font, small padding so the page looks framed */
         body {
             background: var(--sky);
             min-height: 100vh;
@@ -48,13 +45,11 @@
             flex-direction: column;
         }
  
-        /* NAVBAR: pink, brown outline, rounded corners */
         .navbar {
             background-color: var(--pink) !important;
             border: 2px solid var(--brown);
             border-radius: 0.5rem;
         }
-        /* FIXED: this was still set to 'Lilita One', which is why ITC Bauhaus wasn't showing here */
         .navbar-brand {
             font-family: 'ITC Bauhaus', sans-serif;
             color: var(--brown) !important;
@@ -68,11 +63,6 @@
             color: var(--brown) !important;
             margin-left: 1.5rem;
         }
- 
-        /* BIG TITLE on the left */
-        /* FIXED: this .page-title rule is more specific than the plain "h1" selector, so it was
-           overriding the h1 rule and forcing Lilita One back on. Setting it here directly fixes it,
-           so the separate h1 rule has been removed to avoid the same conflict happening again. */
         .page-title {
             font-family: 'ITC Bauhaus', sans-serif;
             font-size: 3.5rem;
@@ -83,28 +73,22 @@
             max-width: 100%;
         }
  
-        /* MENU CARD: cream, brown outline, rounded */
         .app-card {
             background: var(--cream);
             border: 2px solid var(--brown);
             border-radius: 0.75rem;
             box-shadow: none;
         }
-        /* CHANGED: the screenshot has no card header or card footer, so they are hidden (not deleted) */
         .app-card .card-header,
         .app-card .card-footer {
             display: none;
         }
-        /* "Menu" heading: big, centered, rounded font */
-        /* FIXED: this was still set to 'Lilita One' too */
         .app-card h5 {
             font-family: 'ITC Bauhaus', sans-serif;
             font-size: 2rem;
             text-align: center;
             color: var(--brown);
         }
- 
-        /* MENU ITEMS: no boxes, no hover color, just checkbox + name */
         .menu-item {
             display: flex;
             align-items: center;
@@ -122,12 +106,10 @@
             margin-left: 0.8rem;
             cursor: pointer;
         }
-        /* CHANGED: the screenshot shows no prices, so they are hidden (delete this rule to show them again) */
         .menu-item .price {
             display: none;
         }
- 
-        /* CHECKBOXES: big rounded squares with brown outline, filled brown when checked */
+
         .form-check-input {
             width: 2rem;
             height: 2rem;
@@ -144,8 +126,6 @@
             border-color: var(--brown);
             box-shadow: 0 0 0 0.2rem rgba(74, 50, 34, 0.25);
         }
- 
-        /* BUTTON: solid brown, rounded, white text */
         .btn-order {
             background: var(--brown);
             border: none;
@@ -159,7 +139,6 @@
             color: #fff;
         }
  
-        /* CHANGED: hide the divider line; the screenshot has no line under the button */
         .app-card hr {
             display: none;
         }
@@ -167,8 +146,6 @@
             min-height: 0;
             margin-top: 1rem;
         }
-        /* ADDED: forces the generated receipt text to brown, in case main.py applies its own
-           text color (e.g. a Bootstrap class like text-dark) that would otherwise override it */
         #show, #show * {
             color: var(--brown) !important;
         }
@@ -185,7 +162,6 @@
             color: var(--brown);
         }
  
-        /* FOOTER: pink, brown outline, rounded */
         footer {
             background-color: var(--pink) !important;
             color: var(--brown) !important;
@@ -232,7 +208,7 @@
                 <img src="https://i.pinimg.com/736x/0b/59/65/0b596512d14d6c27092b3c5d9e5aac9a.jpg" alt="Chiikawa characters baking" class="hero-img">
             </div>
  
-            <!-- CHANGED: so the menus on hte right -->
+            <!-- so the menus on hte right -->
             <div class="col-12 col-lg-5">
  
                 <div class="card app-card">
